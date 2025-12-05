@@ -1,86 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful World</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ff6b81, #f7d4a3);
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
-        header {
-            text-align: center;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-        }
-        h1 {
-            font-size: 3em;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { text-shadow: 0 0 15px #fff, 0 0 25px #ff6b81; }
-            50% { text-shadow: 0 0 25px #fff, 0 0 35px #f7d4a3; }
-            100% { text-shadow: 0 0 15px #fff, 0 0 25px #ff6b81; }
-        }
-        .content {
-            text-align: center;
-            padding: 30px;
-            font-size: 1.2em;
-            line-height: 1.8;
-        }
-        .highlight {
-            color: #ffd700;
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-        .quote {
-            font-size: 1.4em;
-            font-style: italic;
-            margin-top: 50px;
-            color: #fff;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            max-width: 700px;
-            margin: 30px auto;
-        }
-        footer {
-            background-color: #ff6b81;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>TerraformTitans — Instance Identity</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: #1e293b;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 180px auto;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .key {
+      color: #93c5fd;
+      font-weight: 600;
+    }
+    .value {
+      color: #f1f5f9;
+    }
+    hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid #334155;
+    }
+    footer {
+      font-size: 0.95rem;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to the Colorful World!</h1>
-    </header>
-
-    <div class="content">
-        <p>Step into a world where color reigns, and everything is vibrant!</p>
-        <p><span class="highlight">Experience the magic of color!</span></p>
+  <div class="container">
+    <h1>TerraformTitans</h1>
+    <p>This EC2 instance serves its own identity and IPs:</p>
+    <div class="grid">
+      <div class="key">Instance ID</div><div class="value">$IID</div>
+      <div class="key">Availability Zone</div><div class="value">$AZ</div>
+      <div class="key">Private IP</div><div class="value">$PRI_IP</div>
+      <div class="key">Public IP</div><div class="value">${PUB_IP:-"(none — behind ALB or no public IP)"}</div>
     </div>
-
-    <div class="quote">
-        <p>"Life is what happens when you're busy making other plans." - John Lennon</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 The Terraform Titans</p>
-    </footer>
-
+    <hr>
+    <footer>We are Team TerraTitans and this is our Capstone Project [Team-4]</footer>
+  </div>
 </body>
 </html>
