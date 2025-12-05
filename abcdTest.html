@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful World</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff6b81, #f7d4a3);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { text-shadow: 0 0 15px #fff, 0 0 25px #ff6b81; }
+            50% { text-shadow: 0 0 25px #fff, 0 0 35px #f7d4a3; }
+            100% { text-shadow: 0 0 15px #fff, 0 0 25px #ff6b81; }
+        }
+        .content {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .quote {
+            font-size: 1.4em;
+            font-style: italic;
+            margin-top: 50px;
+            color: #fff;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+        footer {
+            background-color: #ff6b81;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to the Colorful World!</h1>
+    </header>
+
+    <div class="content">
+        <p>Step into a world where color reigns, and everything is vibrant!</p>
+        <p><span class="highlight">Experience the magic of color!</span></p>
+    </div>
+
+    <div class="quote">
+        <p>"Life is what happens when you're busy making other plans." - John Lennon</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Terraform Titans</p>
+    </footer>
+
+</body>
+</html>
